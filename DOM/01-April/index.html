@@ -1,17 +1,56 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DOM Example</title>
 </head>
 <body>
-  <div id="mydiv"> Indroduction To Dom<div>
-  <h4>DOM manipulation</h4>
-  <p>
-    DOM is created by browser
-  </p>
-  <scrip src="script1.js"></script>
-  
+
+  <div id="myDiv">Introduction to DOM</div>
+  <h4>What is the DOM?</h4>
+
+  <p class="p1">The Document Object Model (DOM) is a programming interface.</p>
+  <p class="p1">The Document Object Model (DOM) is a programming interface.</p>
+  <p class="p1">The Document Object Model (DOM) is a programming interface.</p>
+
+  <button id="btn">Click Me</button>
+
+<script src="script1.js"></script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bulb Toggle</title>
+</head>
+<body style="text-align:center; margin-top:50px;">
+
+  <h2>Bulb ON/OFF using DOM</h2>
+
+  <!-- Start with OFF image -->
+  <img id="bulb" src="Bulb.jpg" width="150">
+
+  <br><br>
+
+  <button id="onBtn">Turn ON</button>
+  <button id="offBtn">Turn OFF</button>
+
+  <script>
+    let bulb = document.querySelector("#bulb");
+    let onBtn = document.querySelector("#onBtn");
+    let offBtn = document.querySelector("#offBtn");
+
+    onBtn.addEventListener("click", () => {
+      bulb.src = "Bulbon.jpg";   // ON image
+    });
+
+    offBtn.addEventListener("click", () => {
+      bulb.src = "Bulb.jpg";  // OFF image
+    });
+  </script>
+
 </body>
 </html>
